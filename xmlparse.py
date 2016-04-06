@@ -28,7 +28,7 @@ elif networkindicator == 'national1':
    network = 3
 else:
    network = 0
- 
+# This should not happen 
 
 # Print tag for next lexel
 print("M3UA",)
