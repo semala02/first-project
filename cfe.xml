@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SFE SYSTEM "cisco.dtd">
+<CISCO_FE>
+  <HOST IP="blaj"/>
+  <SS7 Local_PC="999" Network="9">
+    <M3UA ASPID="9" Network_app="1" IPP ="blaj" RC="9">
+      <SG ID="19" IP="blaj"/>
+      <SG ID="29" IP="blaj"/>
+      <SG ID="39" IP="blaj"/>
+      <SG ID="49" IP="blaj"/>
+
+      <ROUTE_SG sg="19" Destination_PC="999"/>
+      <ROUTE_SG sg="29" Destination_PC="999"/>
+      <ROUTE_SG sg="39" Destination_PC="999"/>
+      <ROUTE_SG sg="49" Destination_PC="999"/>
+    </M3UA>
+    <SCCP route_cgpa_on_gt="blaj" xudt="blaj">
+      <RSS Destination_PC="999" ssn="146"/>
+      <LSS Concerned_PC="999" ssn="146"/>
+    </SCCP>
+  </SS7>
+</CISCO_FE>

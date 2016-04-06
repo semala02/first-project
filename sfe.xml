@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SFE SYSTEM "sfe.dtd">
+<SFE ipc="long" manual_override="no">
+  <CLIENT_CONNECTION host_id="3"/>
+  <SS7 lpc="160" networkindicator="national0" ssf_spare="0" type="itu">
+    <M3UA asp_id="1" destination_audit="yes" licence="/usr/ss7/license" network_appearance="1" primary_ip="10.0.0.1" routing_context="2">
+      <SG sg_id="1">
+        <SG_LINK primary_ip="10.0.0.2"/>
+      </SG>
+      <SG sg_id="2">
+        <SG_LINK primary_ip="10.0.0.3"/>
+      </SG>
+      <SG sg_id="3">
+        <SG_LINK primary_ip="10.0.0.4"/>
+      </SG>
+      <SG sg_id="4">
+        <SG_LINK primary_ip="10.0.0.5"/>
+      </SG>
+      <M3UA_ROUTE destination_audit="yes" dpc="161">
+        <M3UA_ROUTE_SG sg="1"/>
+        <M3UA_ROUTE_SG sg="2"/>
+        <M3UA_ROUTE_SG sg="3"/>
+        <M3UA_ROUTE_SG sg="4"/>
+      </M3UA_ROUTE>
+    </M3UA>
+    <SCCP reassembly="yes" route_cgpa_on_gt="yes" xudt="yes">
+      <RSP pc="161">
+        <RSS ssn="146"/>
+      </RSP>
+      <LSS ssn="146">
+        <CONCERNED pc="161"/>
+      </LSS>
+    </SCCP>
+  </SS7>
+</SFE>
